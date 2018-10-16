@@ -22,35 +22,31 @@ logging:
 zuul:
   routes:
     userservice:
-      path: /userservice/**
+      path: /v1-0-0/userservice/**
       serviceId: User-service
       stripPrefix: true
     productservice:
-      path: /productservice/**
+      path: /v1-0-0/productservice/**
       serviceId: Product-service
       stripPrefix: true
     orderservice:
-      path: /1-0-1/orderservice/**
+      path: /v1-0-0/orderservice/**
       serviceId: Order-service
       stripPrefix: true
-    orderservice:
-      path: /1-0-2/orderservice/**
-      serviceId: Order-service-1.0.2
-      stripPrefix: true
     newsservice:
-      path: /newsservice/**
+      path: /v1-0-0/newsservice/**
       serviceId: News-service
       stripPrefix: true
     eventservice:
-      path: /eventservice/**
+      path: /v1-0-0/eventservice/**
       serviceId: Event-service
       stripPrefix: true
     shipperservice:
-      path: /shipperservice/**
+      path: /v1-0-0/shipperservice/**
       serviceId: Shipper-service
       stripPrefix: true
     searchservice:
-      path: /searchservice/**
+      path: /v1-0-0/searchservice/**
       serviceId: Search-service
       stripPrefix: true
   retryable: true
