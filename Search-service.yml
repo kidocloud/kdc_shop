@@ -1,14 +1,14 @@
 server:
-  port: 33002
+  port: 33061
 
 eureka:
   client:
     serviceUrl:
-      defaultZone: http:/192.168.0.11:10002/eureka/
+      defaultZone: http://192.168.0.11:10002/eureka/
       
 logging:
   pattern: 
     console: "%d{yyyy-MM-dd HH:mm:ss} ${LOG_LEVEL_PATTERN:-%5p} %m%n"
     file: "%d{yyyy-MM-dd HH:mm:ss} ${LOG_LEVEL_PATTERN:-%5p} %m%n"
-  #file: userservice2.log
-  file: /var/kido/logs/userservice2.log
+  #file: userservice.log
+  file: /var/kido/logs/searchservice.log

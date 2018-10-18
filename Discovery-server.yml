@@ -14,3 +14,5 @@ eureka:
     fetchRegistry: false
     serviceUrl:
       defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/
+  server:
+    eviction-interval-timer-in-ms: 30000

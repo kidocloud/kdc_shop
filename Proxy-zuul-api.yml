@@ -35,7 +35,7 @@ zuul:
       stripPrefix: true
     newsservice:
       path: /newsservice/**
-      serviceId: News-service-v1-1-0
+      serviceId: News-service
       stripPrefix: true
     eventservice:
       path: /eventservice/**
