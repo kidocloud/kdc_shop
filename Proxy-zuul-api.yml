@@ -30,8 +30,8 @@ zuul:
       serviceId: Product-service
       stripPrefix: true
     orderservice:
-      path: /orderservice/**
-      serviceId: Order-service
+      path: /v1-1-1/orderservice/**
+      serviceId: Order-service-v1.1.1
       stripPrefix: true
     newsservice:
       path: /newsservice/**
@@ -88,7 +88,7 @@ hystrix:
           strategy: THEARD
           thread:
             timeoutInMilliseconds: 120000
-    Order-service:
+    Order-service-v1.1.1:
       execution:
         isolation:
           thread:
@@ -158,7 +158,7 @@ Product-service:
     eureka:
       enabled: true
       
-Order-service:
+Order-service-v1.1.1:
   ribbon:
     #NIWSServerListClassName: com.netflix.loadbalancer.ConfigurationBasedServerList
     #listOfServers: http://localhost:33021,http://localhost:33022
