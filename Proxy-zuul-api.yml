@@ -22,31 +22,31 @@ logging:
 zuul:
   routes:
     userservice:
-      path: /v1-1-0/userservice/**
+      path: /userservice/**
       serviceId: User-service
       stripPrefix: true
     productservice:
-      path: /v1-1-0/productservice/**
+      path: /productservice/**
       serviceId: Product-service
       stripPrefix: true
     orderservice:
-      path: /v1-1-0/orderservice/**
+      path: /orderservice/**
       serviceId: Order-service
       stripPrefix: true
     newsservice:
-      path: /v1-1-0/newsservice/**
-      serviceId: News-service
+      path: /newsservice/**
+      serviceId: News-service-1-1-0
       stripPrefix: true
     eventservice:
-      path: /v1-1-0/eventservice/**
+      path: /eventservice/**
       serviceId: Event-service
       stripPrefix: true
     shipperservice:
-      path: /v1-1-0/shipperservice/**
+      path: /shipperservice/**
       serviceId: Shipper-service
       stripPrefix: true
     searchservice:
-      path: /v1-1-0/searchservice/**
+      path: /searchservice/**
       serviceId: Search-service
       stripPrefix: true
   retryable: true
@@ -177,10 +177,10 @@ Order-service:
       
 News-service:
   ribbon:
-    #NIWSServerListClassName: com.netflix.loadbalancer.ConfigurationBasedServerList
-    #listOfServers: http://localhost:33031,http://localhost:33032
-#    ConnectTimeout: 10000
-#    ReadTimeout: 10000
+    NIWSServerListClassName: com.netflix.loadbalancer.ConfigurationBasedServerList
+    listOfServers: http://192.168.0.32:33031,http://192.168.0.32:33032
+    ConnectTimeout: 10000
+    ReadTimeout: 10000
     MaxTotalHttpConnections: 2000
     MaxConnectionsPerHost: 1000
     maxAutoRetries: 3
