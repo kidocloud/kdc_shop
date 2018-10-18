@@ -177,10 +177,10 @@ Order-service:
       
 News-service:
   ribbon:
-    NIWSServerListClassName: com.netflix.loadbalancer.ConfigurationBasedServerList
-    listOfServers: http://192.168.0.32:33031,http://192.168.0.32:33032
-    ConnectTimeout: 10000
-    ReadTimeout: 10000
+    #NIWSServerListClassName: com.netflix.loadbalancer.ConfigurationBasedServerList
+    #listOfServers: http://192.168.0.32:33031,http://192.168.0.32:33032
+    #ConnectTimeout: 10000
+    #ReadTimeout: 10000
     MaxTotalHttpConnections: 2000
     MaxConnectionsPerHost: 1000
     maxAutoRetries: 3
