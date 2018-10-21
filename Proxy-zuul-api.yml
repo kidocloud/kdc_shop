@@ -22,32 +22,32 @@ logging:
 zuul:
   routes:
     userservice:
-      path: /userservice/**
-      serviceId: User-service
+      path: /v1-1-1/userservice/**
+      serviceId: User-service-v1.1.1
       stripPrefix: true
     productservice:
-      path: /productservice/**
-      serviceId: Product-service
+      path: /v1-1-1/productservice/**
+      serviceId: Product-service-v1.1.1
       stripPrefix: true
     orderservice:
       path: /v1-1-1/orderservice/**
       serviceId: Order-service-v1.1.1
       stripPrefix: true
     newsservice:
-      path: /newsservice/**
-      serviceId: News-service
+      path: /v1-1-1/newsservice/**
+      serviceId: News-service-v1.1.1
       stripPrefix: true
     eventservice:
-      path: /eventservice/**
-      serviceId: Event-service
+      path: /v1-1-1/eventservice/**
+      serviceId: Event-service-v1.1.1
       stripPrefix: true
     shipperservice:
-      path: /shipperservice/**
-      serviceId: Shipper-service
+      path: /v1-1-1/shipperservice/**
+      serviceId: Shipper-service-v1.1.1
       stripPrefix: true
     searchservice:
-      path: /searchservice/**
-      serviceId: Search-service
+      path: /v1-1-1/searchservice/**
+      serviceId: Search-service-v1.1.1
       stripPrefix: true
   retryable: true
   #ribbonIsolationStrategy:THREAD
@@ -76,13 +76,13 @@ zuul:
 
 hystrix:
   command:
-    User-service:
+    User-service-v1.1.1:
       execution:
         isolation:
           strategy: THEARD
           thread:
             timeoutInMilliseconds: 120000
-    Product-service:
+    Product-service-v1.1.1:
       execution:
         isolation:       
           strategy: THEARD
@@ -95,28 +95,28 @@ hystrix:
           strategy: THEARD
           thread:
             timeoutInMilliseconds: 120000
-    News-service:
+    News-service-v1.1.1:
       execution:
         isolation:
           thread:
           strategy: THEARD
           thread:
             timeoutInMilliseconds: 120000
-    Event-service:
+    Event-service-v1.1.1:
       execution:
         isolation:
           thread:
           strategy: THEARD
           thread:
             timeoutInMilliseconds: 120000
-    Shipper-service:
+    Shipper-service-v1.1.1:
       execution:
         isolation:
           thread:
           strategy: THEARD
           thread:
             timeoutInMilliseconds: 120000
-    Search-service:
+    Search-service-v1.1.1:
       execution:
         isolation:
           thread:
@@ -124,7 +124,7 @@ hystrix:
           thread:
             timeoutInMilliseconds: 120000
 
-User-service:
+User-service-v1.1.1:
   ribbon:
     #NIWSServerListClassName: com.netflix.loadbalancer.ConfigurationBasedServerList
     #listOfServers: http://localhost:33001,http://localhost:33002,http://61.28.226.134:33003
@@ -141,7 +141,7 @@ User-service:
     eureka:
       enabled: true
     
-Product-service:
+Product-service-v1.1.1:
   ribbon:
     #NIWSServerListClassName: com.netflix.loadbalancer.ConfigurationBasedServerList
     #listOfServers: http://localhost:33011,http://localhost:33012
@@ -175,7 +175,7 @@ Order-service-v1.1.1:
     eureka:
       enabled: true
       
-News-service:
+News-service-v1.1.1:
   ribbon:
     #NIWSServerListClassName: com.netflix.loadbalancer.ConfigurationBasedServerList
     #listOfServers: http://192.168.0.32:33031,http://192.168.0.32:33032
@@ -192,7 +192,7 @@ News-service:
     eureka:
       enabled: true
       
-Event-service:
+Event-service-v1.1.1:
   ribbon:
     #NIWSServerListClassName: com.netflix.loadbalancer.ConfigurationBasedServerList
     #listOfServers: http://localhost:33031,http://localhost:33032
@@ -209,7 +209,7 @@ Event-service:
     eureka:
       enabled: true
 
-Shipper-service:
+Shipper-service-v1.1.1:
   ribbon:
     #NIWSServerListClassName: com.netflix.loadbalancer.ConfigurationBasedServerList
     #listOfServers: http://localhost:33031,http://localhost:33032
@@ -226,7 +226,7 @@ Shipper-service:
     eureka:
       enabled: true
 
-Search-service:
+Search-service-v1.1.1:
   ribbon:
     #NIWSServerListClassName: com.netflix.loadbalancer.ConfigurationBasedServerList
     #listOfServers: http://localhost:33031,http://localhost:33032
